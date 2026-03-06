@@ -15,13 +15,14 @@ from model import make_model
 # DO THIS
 def _sigmoid_sat_dist(v: torch.Tensor) -> torch.Tensor:
     # v in [0,1]
-    pass
+    
+    return torch.min(v, 1.0 - v)
 
 
 # DO THIS
 def _tanh_sat_dist(v: torch.Tensor) -> torch.Tensor:
     # v in [-1,1]
-    pass
+    return torch.min(1.0 - v, 1.0 + v)
 
 
 def _hidden_sat_time(model, h: torch.Tensor) -> torch.Tensor:
@@ -161,7 +162,12 @@ def grad_time_profile(task, model, x: torch.Tensor, y_onehot: torch.Tensor, coll
 
 # DO THIS
 def global_grad_norm(params):
-    pass
+    # compute global norm of gradients over all parameters
+    total = 0.0
+    for p in params:
+        if p.grad is not None:
+            total += (p.grad.detach() ** 2).sum()
+    return total.sqrt().item()
 
 def clip_rescale(params, cutoff: float):
     # rescale grads if global norm > cutoff

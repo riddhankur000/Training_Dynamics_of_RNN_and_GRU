@@ -6,19 +6,20 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# DO THIS
 def spectral_radius(mat: np.ndarray) -> float:
     # The spectral radius of a matrix is the largest absolute value of its eigenvalues.
     # mat is (H,H)
     eigenvalues = np.linalg.eigvals(mat)
     return float(np.max(np.abs(eigenvalues)))
 
-
+# DO THIS
 def _tanh_saturation_distance(h: torch.Tensor) -> torch.Tensor:
     """Distance to saturation for tanh outputs in [-1, 1].
     """
     return torch.min(1.0 - h, 1.0 + h)
 
-
+# DO THIS
 def _sigmoid_saturation_distance(h: torch.Tensor) -> torch.Tensor:
     """Distance to saturation for sigmoid outputs in [0, 1].
     """
