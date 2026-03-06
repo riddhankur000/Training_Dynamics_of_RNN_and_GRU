@@ -138,6 +138,7 @@ class VanillaRNN(nn.Module):
         logits = torch.zeros((T, B, self.nout), dtype=dtype, device=device)
 
         for t in range(T):
+            # ht = ϕ(Wxh xt + Whh ht−1 + bh), ot = Whoht + bo
             h_t = self.act(h_prev @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
             h[t] = h_t
             
@@ -148,7 +149,7 @@ class VanillaRNN(nn.Module):
         if self.classif_type in ["lastSoftmax", "lastLinear"]:
             return logits[-1], h
         else: 
-            return logits.reshape(T * B, self.nout), h
+            return logits.view(T*B, self.nout), h
 
     # ---- small helpers used by train.py diagnostics / saving ----
     supports_omega: bool = True
