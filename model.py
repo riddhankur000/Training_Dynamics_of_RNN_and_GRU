@@ -169,7 +169,7 @@ class VanillaRNN(nn.Module):
     # DO THIS
     def recurrent_weight_for_rho(self) -> torch.Tensor:
         # This needs to return the recurrent weight matrix.
-        pass
+        return self.W_hh
 
     def numpy_state(self) -> dict:
         return {
@@ -256,7 +256,7 @@ class GRUModel(nn.Module):
     def recurrent_weight_for_rho(self) -> torch.Tensor:
         # This needs to return the recurrent weight matrix. There are multiple in
         # the case of the GRU: return the candidate one similar to the RNN case.
-        pass
+        return self.W_hh
 
     def numpy_state(self) -> dict:
         return {
