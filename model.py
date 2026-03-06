@@ -16,13 +16,13 @@ def spectral_radius(mat: np.ndarray) -> float:
 def _tanh_saturation_distance(h: torch.Tensor) -> torch.Tensor:
     """Distance to saturation for tanh outputs in [-1, 1].
     """
-    return 1.0 - torch.abs(h)
+    return torch.min(1.0 - h, 1.0 + h)
 
 
 def _sigmoid_saturation_distance(h: torch.Tensor) -> torch.Tensor:
     """Distance to saturation for sigmoid outputs in [0, 1].
     """
-    return torch.minimum(h, 1.0 - h)
+    return torch.min(h, 1.0 - h)
 
 
 class VanillaRNN(nn.Module):
