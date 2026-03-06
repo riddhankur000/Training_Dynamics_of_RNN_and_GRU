@@ -8,6 +8,7 @@ import torch.nn.functional as F
 
 sys.path.append(os.path.dirname(__file__))
 
+import model
 from tasks import make_task, to_torch
 from model import make_model
 
@@ -142,12 +143,32 @@ def grad_time_profile(task, model, x: torch.Tensor, y_onehot: torch.Tensor, coll
       g_t[t] = mean_b || dL/dh_t ||_2
       a_t[t] = mean_{b,h} activation derivative at h_t
     """
+
     # Set model zero grad and call the loss function.
+    model.zero_grad(set_to_none=True)
+    loss, err, _, h, extras = compute_loss_and_error(task, model, x, y_onehot, return_extras=collect_extras)
+
     # Compute gradient of loss wrt h and find the norm. This is g_t.
+    g_h = torch.autograd.grad(loss, h, retain_graph=True)[0]
+    g_t = torch.norm(g_h, p=2, dim=2).mean(dim=1)
+
     # Then compute a_t as the mean activation derivative and saturation distances.
+    deriv = model.act_deriv_from_h(h)
+    a_t = deriv.mean(dim=(1, 2))
+
     # Then sat_t using _hidden_sat_time.
+    sat_t = _hidden_sat_time(model, h)
+
     # Then if extras was passed in and is a dict, and the model is GRU,
     # also compute z_sat_t and r_sat_t using _sigmoid_sat_dist on the gate pre-activations.
+    z_sat_t, r_sat_t = None, None
+    if collect_extras and extras is not None:
+        if "z" in extras:
+            z_act = torch.sigmoid(extras["z"])
+            z_sat_t = _sigmoid_sat_dist(z_act).mean(dim=(1, 2))
+        if "r" in extras:
+            r_act = torch.sigmoid(extras["r"])
+            r_sat_t = _sigmoid_sat_dist(r_act).mean(dim=(1, 2))
 
     return (
         loss.detach(),
