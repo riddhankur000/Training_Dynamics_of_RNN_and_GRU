@@ -141,6 +141,25 @@ class VanillaRNN(nn.Module):
         # every step and return all of them flattened into (T*B, nout).
         # Final return signature looks like `logits, h`.
 
+        if self.classif_type != "lastSoftmax" and self.classif_type != "lastLinear" and self.classif_type != "softmax":
+            raise ValueError(f"Unknown classif_type={self.classif_type}")
+    
+        if self.classif_type == "lastSoftmax" or self.classif_type == "lastLinear":
+            h = torch.zeros((T, B, self.nhid), dtype=u.dtype, device=u.device)
+            for t in range(T):
+                h[t] = self.act(h[t-1] @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
+            logits = h[-1] @ self.W_hy + self.b_hy
+            return logits, h
+        
+        if self.classif_type == "softmax":
+            h = torch.zeros((T, B, self.nhid), dtype=u.dtype, device=u.device)
+            logits = torch.zeros((T, B, self.nout), dtype=u.dtype, device=u.device)
+            for t in range(T):
+                h_t = self.act(h[t-1] @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
+                h[t] = h_t
+                logits[t] = h_t @ self.W_hy + self.b_hy
+            return logits.view(T*B, self.nout), h
+
     # ---- small helpers used by train.py diagnostics / saving ----
     supports_omega: bool = True
 
