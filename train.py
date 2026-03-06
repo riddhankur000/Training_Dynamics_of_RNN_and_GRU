@@ -149,7 +149,10 @@ def grad_time_profile(task, model, x: torch.Tensor, y_onehot: torch.Tensor, coll
     loss, err, _, h, extras = compute_loss_and_error(task, model, x, y_onehot, return_extras=collect_extras)
 
     # Compute gradient of loss wrt h and find the norm. This is g_t.
-    g_h = torch.autograd.grad(loss, h, retain_graph=True)[0]
+    g_h = torch.autograd.grad(loss, h, retain_graph=True, allow_unused=True)[0]
+    if g_h is None:
+        # Handle the case where gradients didn't flow
+        g_h = torch.zeros_like(h)
     g_t = torch.norm(g_h, p=2, dim=2).mean(dim=1)
 
     # Then compute a_t as the mean activation derivative and saturation distances.
