@@ -288,7 +288,64 @@ class GRUModel(nn.Module):
         #   - "r": pre-activation of reset gate r
         #   - "h_tilde": pre-activation of candidate h_tilde
         # See the math in the assignment PDF for details.
-        raise ValueError(f"Unknown classif_type={self.classif_type}")
+
+        device = u.device
+        dtype = u.dtype
+        if self.classif_type not in ["lastSoftmax", "lastLinear", "softmax"]:
+            raise ValueError(f"Unknown classif_type={self.classif_type}")
+
+        h = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+        h_prev = torch.zeros((B, self.nhid), dtype=dtype, device=device)
+        
+        logits = torch.zeros((T, B, self.nout), dtype=dtype, device=device)
+
+        if return_extras:
+            z_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+            r_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+            h_tilde_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+
+        for t in range(T):
+            u_t = u[t]
+
+            # update gate
+            z_pre = u_t @ self.W_uz + h_prev @ self.W_hz + self.b_z
+            z_t = torch.sigmoid(z_pre)
+
+            # reset gate
+            r_pre = u_t @ self.W_ur + h_prev @ self.W_hr + self.b_r
+            r_t = torch.sigmoid(r_pre)
+
+            # candidate hidden state
+            h_tilde_pre = u_t @ self.W_uh + (r_t * h_prev) @ self.W_hh + self.b_h
+            h_tilde = torch.tanh(h_tilde_pre)
+
+            h_t = (1.0 - z_t) * h_prev + z_t * h_tilde
+            
+            h[t] = h_t
+            
+            logits[t] = h_t @ self.W_hy + self.b_y
+            
+            h_prev = h_t
+
+            if return_extras:
+                z_pre_seq[t] = z_pre
+                r_pre_seq[t] = r_pre
+                h_tilde_pre_seq[t] = h_tilde_pre
+
+        if self.classif_type in ["lastSoftmax", "lastLinear"]:
+            final_logits = logits[-1]
+        else: # "softmax"
+            final_logits = logits.view(T * B, self.nout) 
+
+        if return_extras:
+            extras = {
+                "z": z_pre_seq,
+                "r": r_pre_seq,
+                "h_tilde": h_tilde_pre_seq
+            }
+            return final_logits, h, extras
+
+        return final_logits, h
 
 
 def make_model(
