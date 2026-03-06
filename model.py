@@ -125,40 +125,30 @@ class VanillaRNN(nn.Module):
 
     # DO THIS
     def forward(self, u: torch.Tensor):
-        """
-        u: (T, B, nin)
-        returns:
-          logits:
-            - lastSoftmax: (B, nout) pre-softmax logits (we apply CE directly)
-            - softmax: (T*B, nout) logits for all steps flattened
-            - lastLinear: (B, nout) regression output
-          h: (T, B, nhid)
-        """
         T, B, _ = u.shape
+        device = u.device
+        dtype = u.dtype
 
-        # If classif_type is lastSoftmax or lastLinear, you should compute the logits
-        # at every step but only return the last step's logits. If classif_type is softmax, you should compute the logits at
-        # every step and return all of them flattened into (T*B, nout).
-        # Final return signature looks like `logits, h`.
-
-        if self.classif_type != "lastSoftmax" and self.classif_type != "lastLinear" and self.classif_type != "softmax":
+        if self.classif_type not in ["lastSoftmax", "lastLinear", "softmax"]:
             raise ValueError(f"Unknown classif_type={self.classif_type}")
-    
-        if self.classif_type == "lastSoftmax" or self.classif_type == "lastLinear":
-            h = torch.zeros((T, B, self.nhid), dtype=u.dtype, device=u.device)
-            for t in range(T):
-                h[t] = self.act(h[t-1] @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
-            logits = h[-1] @ self.W_hy + self.b_hy
-            return logits, h
+
+        h = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+        h_prev = torch.zeros((B, self.nhid), dtype=dtype, device=device)
         
-        if self.classif_type == "softmax":
-            h = torch.zeros((T, B, self.nhid), dtype=u.dtype, device=u.device)
-            logits = torch.zeros((T, B, self.nout), dtype=u.dtype, device=u.device)
-            for t in range(T):
-                h_t = self.act(h[t-1] @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
-                h[t] = h_t
-                logits[t] = h_t @ self.W_hy + self.b_hy
-            return logits.view(T*B, self.nout), h
+        logits = torch.zeros((T, B, self.nout), dtype=dtype, device=device)
+
+        for t in range(T):
+            h_t = self.act(h_prev @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
+            h[t] = h_t
+            
+            logits[t] = h_t @ self.W_hy + self.b_hy
+            
+            h_prev = h_t
+
+        if self.classif_type in ["lastSoftmax", "lastLinear"]:
+            return logits[-1], h
+        else: 
+            return logits.reshape(T * B, self.nout), h
 
     # ---- small helpers used by train.py diagnostics / saving ----
     supports_omega: bool = True
