@@ -133,24 +133,26 @@ class VanillaRNN(nn.Module):
         if self.classif_type not in ["lastSoftmax", "lastLinear", "softmax"]:
             raise ValueError(f"Unknown classif_type={self.classif_type}")
 
-        h = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
         h_prev = torch.zeros((B, self.nhid), dtype=dtype, device=device)
-        
-        logits = torch.zeros((T, B, self.nout), dtype=dtype, device=device)
+        h_seq = []
 
+        # 1. Just collect the hidden states
         for t in range(T):
-            # ht = ϕ(Wxh xt + Whh ht−1 + bh), ot = Whoht + bo
             h_t = self.act(h_prev @ self.W_hh + u[t] @ self.W_uh + self.b_hh)
-            h[t] = h_t
-            
-            logits[t] = h_t @ self.W_hy + self.b_hy
-            
+            h_seq.append(h_t)
             h_prev = h_t
 
+        # 2. Stack them into the `h` tensor
+        h = torch.stack(h_seq, dim=0) # Shape: (T, B, nhid)
+
+        # 3. Compute logits directly FROM `h` so it connects to the loss graph
         if self.classif_type in ["lastSoftmax", "lastLinear"]:
-            return logits[-1], h
+            logits = h[-1] @ self.W_hy + self.b_hy
+            return logits, h
         else: 
-            return logits.view(T*B, self.nout), h
+            h_flat = h.view(T * B, self.nhid)
+            logits = h_flat @ self.W_hy + self.b_hy
+            return logits, h
 
     # ---- small helpers used by train.py diagnostics / saving ----
     supports_omega: bool = True
@@ -279,75 +281,59 @@ class GRUModel(nn.Module):
 
     # DO THIS
     def forward(self, u: torch.Tensor, return_extras: bool = False):
-        """u: (T,B,nin). Returns (logits_or_y, h, extras?)."""
         T, B, _ = u.shape
-        # If lastSoftmax or lastLinear, return only the logits and the last step's output. If softmax, return the logits and
-        # all steps' outputs flattened into (T*B, nout). Final return signature looks like `logits, h`.
-        # Additionally, if return_extras is True, your return signature should be `logits, h, extras` where
-        # extras is a dict containing the gate pre-activations and candidate pre-activation for all steps, stacked into tensors of shape (T, B, nhid):
-        #   - "z": pre-activation of update gate z
-        #   - "r": pre-activation of reset gate r
-        #   - "h_tilde": pre-activation of candidate h_tilde
-        # See the math in the assignment PDF for details.
-
         device = u.device
         dtype = u.dtype
+
         if self.classif_type not in ["lastSoftmax", "lastLinear", "softmax"]:
             raise ValueError(f"Unknown classif_type={self.classif_type}")
 
-        h = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
         h_prev = torch.zeros((B, self.nhid), dtype=dtype, device=device)
-        
-        logits = torch.zeros((T, B, self.nout), dtype=dtype, device=device)
+        h_seq = []
 
         if return_extras:
-            z_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
-            r_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
-            h_tilde_pre_seq = torch.zeros((T, B, self.nhid), dtype=dtype, device=device)
+            z_pre_seq, r_pre_seq, h_tilde_pre_seq = [], [], []
 
         for t in range(T):
             u_t = u[t]
 
-            # update gate
             z_pre = u_t @ self.W_uz + h_prev @ self.W_hz + self.b_z
             z_t = torch.sigmoid(z_pre)
 
-            # reset gate
             r_pre = u_t @ self.W_ur + h_prev @ self.W_hr + self.b_r
             r_t = torch.sigmoid(r_pre)
 
-            # candidate hidden state
             h_tilde_pre = u_t @ self.W_uh + (r_t * h_prev) @ self.W_hh + self.b_h
             h_tilde = torch.tanh(h_tilde_pre)
 
             h_t = (1.0 - z_t) * h_prev + z_t * h_tilde
-            
-            h[t] = h_t
-            
-            logits[t] = h_t @ self.W_hy + self.b_y
-            
+            h_seq.append(h_t)
             h_prev = h_t
 
             if return_extras:
-                z_pre_seq[t] = z_pre
-                r_pre_seq[t] = r_pre
-                h_tilde_pre_seq[t] = h_tilde_pre
+                z_pre_seq.append(z_pre)
+                r_pre_seq.append(r_pre)
+                h_tilde_pre_seq.append(h_tilde_pre)
 
+        # Stack into h
+        h = torch.stack(h_seq, dim=0)
+
+        # Compute logits FROM h
         if self.classif_type in ["lastSoftmax", "lastLinear"]:
-            final_logits = logits[-1]
-        else: # "softmax"
-            final_logits = logits.view(T * B, self.nout) 
+            final_logits = h[-1] @ self.W_hy + self.b_y
+        else:
+            h_flat = h.view(T * B, self.nhid)
+            final_logits = h_flat @ self.W_hy + self.b_y
 
         if return_extras:
             extras = {
-                "z": z_pre_seq,
-                "r": r_pre_seq,
-                "h_tilde": h_tilde_pre_seq
+                "z": torch.stack(z_pre_seq, dim=0),
+                "r": torch.stack(r_pre_seq, dim=0),
+                "h_tilde": torch.stack(h_tilde_pre_seq, dim=0)
             }
             return final_logits, h, extras
 
         return final_logits, h
-
 
 def make_model(
     model_type: str,

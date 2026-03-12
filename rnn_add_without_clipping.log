@@ -1,0 +1,249 @@
+nohup: ignoring input
+Starting to train (PyTorch).
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.92) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.898 p10=0.893 p90=0.903
+Iter 0000020: train nll 0.150, valid error 043.100%, best valid error 100.000%, avg grad norm   1.050, avg grad norm (post clip)   0.000, rho_Whh  0.72, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.059, valid mae 0.198, err@0.05 085.48%, err@0.10 070.78%, err@0.20 043.10%, maxae 0.674
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.878 p10=0.873 p90=0.883
+Iter 0000040: train nll 0.058, valid error 036.140%, best valid error 043.100%, avg grad norm   0.304, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.169, err@0.05 081.29%, err@0.10 064.39%, err@0.20 036.14%, maxae 0.567
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.875 p10=0.870 p90=0.879
+Iter 0000060: train nll 0.043, valid error 035.890%, best valid error 036.140%, avg grad norm   0.178, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.06%, err@0.10 064.36%, err@0.20 035.89%, maxae 0.550
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.875 p10=0.870 p90=0.879
+Iter 0000080: train nll 0.045, valid error 035.830%, best valid error 035.890%, avg grad norm   0.190, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.08%, err@0.10 064.32%, err@0.20 035.83%, maxae 0.550
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.875 p10=0.870 p90=0.879
+Iter 0000100: train nll 0.045, valid error 035.760%, best valid error 035.830%, avg grad norm   0.162, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.22%, err@0.10 064.20%, err@0.20 035.76%, maxae 0.551
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.875 p10=0.870 p90=0.879
+Iter 0000120: train nll 0.041, valid error 035.710%, best valid error 035.760%, avg grad norm   0.153, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.13%, err@0.10 064.22%, err@0.20 035.71%, maxae 0.549
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.878
+Iter 0000140: train nll 0.039, valid error 035.840%, best valid error 035.710%, avg grad norm   0.151, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.02%, err@0.10 064.27%, err@0.20 035.84%, maxae 0.543
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.874 p10=0.870 p90=0.879
+Iter 0000160: train nll 0.045, valid error 035.710%, best valid error 035.710%, avg grad norm   0.232, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.10%, err@0.10 064.18%, err@0.20 035.71%, maxae 0.549
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000180: train nll 0.041, valid error 035.840%, best valid error 035.710%, avg grad norm   0.201, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.11%, err@0.10 064.18%, err@0.20 035.84%, maxae 0.543
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.866 p90=0.875
+Iter 0000200: train nll 0.046, valid error 035.850%, best valid error 035.710%, avg grad norm   0.172, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.06%, err@0.10 064.22%, err@0.20 035.85%, maxae 0.545
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000220: train nll 0.044, valid error 035.760%, best valid error 035.710%, avg grad norm   0.199, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.01%, err@0.10 064.18%, err@0.20 035.76%, maxae 0.540
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.875 p10=0.870 p90=0.879
+Iter 0000240: train nll 0.044, valid error 035.950%, best valid error 035.710%, avg grad norm   0.214, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.29%, err@0.10 064.14%, err@0.20 035.95%, maxae 0.552
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000260: train nll 0.045, valid error 035.680%, best valid error 035.710%, avg grad norm   0.219, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 080.96%, err@0.10 064.21%, err@0.20 035.68%, maxae 0.537
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.873
+Iter 0000280: train nll 0.043, valid error 035.810%, best valid error 035.680%, avg grad norm   0.182, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.168, err@0.05 081.06%, err@0.10 064.28%, err@0.20 035.81%, maxae 0.550
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.877
+Iter 0000300: train nll 0.043, valid error 035.910%, best valid error 035.680%, avg grad norm   0.142, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.20%, err@0.10 064.01%, err@0.20 035.91%, maxae 0.544
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.866 p90=0.875
+Iter 0000320: train nll 0.043, valid error 035.730%, best valid error 035.680%, avg grad norm   0.206, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.13%, err@0.10 064.12%, err@0.20 035.73%, maxae 0.533
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000340: train nll 0.038, valid error 035.670%, best valid error 035.680%, avg grad norm   0.163, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.94%, err@0.10 064.03%, err@0.20 035.67%, maxae 0.538
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.866 p90=0.875
+Iter 0000360: train nll 0.042, valid error 035.710%, best valid error 035.670%, avg grad norm   0.200, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.14%, err@0.10 064.17%, err@0.20 035.71%, maxae 0.532
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.874 p10=0.869 p90=0.878
+Iter 0000380: train nll 0.044, valid error 035.840%, best valid error 035.670%, avg grad norm   0.172, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.26%, err@0.10 064.17%, err@0.20 035.84%, maxae 0.548
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.876
+Iter 0000400: train nll 0.044, valid error 035.920%, best valid error 035.670%, avg grad norm   0.149, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.22%, err@0.10 063.89%, err@0.20 035.92%, maxae 0.541
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.876
+Iter 0000420: train nll 0.042, valid error 035.950%, best valid error 035.670%, avg grad norm   0.211, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.22%, err@0.10 063.88%, err@0.20 035.95%, maxae 0.541
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.874
+Iter 0000440: train nll 0.044, valid error 035.630%, best valid error 035.670%, avg grad norm   0.201, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.13%, err@0.10 064.02%, err@0.20 035.63%, maxae 0.529
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.874 p10=0.869 p90=0.878
+Iter 0000460: train nll 0.040, valid error 035.880%, best valid error 035.630%, avg grad norm   0.145, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.30%, err@0.10 064.30%, err@0.20 035.88%, maxae 0.548
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.869 p90=0.877
+Iter 0000480: train nll 0.037, valid error 035.960%, best valid error 035.630%, avg grad norm   0.152, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.28%, err@0.10 064.17%, err@0.20 035.96%, maxae 0.545
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.865 p90=0.874
+Iter 0000500: train nll 0.041, valid error 035.600%, best valid error 035.630%, avg grad norm   0.215, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.11%, err@0.10 064.03%, err@0.20 035.60%, maxae 0.528
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.875
+Iter 0000520: train nll 0.046, valid error 035.870%, best valid error 035.600%, avg grad norm   0.200, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.23%, err@0.10 063.81%, err@0.20 035.87%, maxae 0.537
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.867 p90=0.875
+Iter 0000540: train nll 0.040, valid error 035.860%, best valid error 035.600%, avg grad norm   0.151, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.13%, err@0.10 063.77%, err@0.20 035.86%, maxae 0.535
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.866 p90=0.874
+Iter 0000560: train nll 0.040, valid error 035.760%, best valid error 035.600%, avg grad norm   0.218, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.02%, err@0.10 063.86%, err@0.20 035.76%, maxae 0.530
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.876
+Iter 0000580: train nll 0.043, valid error 036.020%, best valid error 035.600%, avg grad norm   0.144, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.29%, err@0.10 064.20%, err@0.20 036.02%, maxae 0.541
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.872
+Iter 0000600: train nll 0.043, valid error 035.610%, best valid error 035.600%, avg grad norm   0.195, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.96%, err@0.10 063.94%, err@0.20 035.61%, maxae 0.530
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.873
+Iter 0000620: train nll 0.047, valid error 035.610%, best valid error 035.600%, avg grad norm   0.190, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.00%, err@0.10 063.77%, err@0.20 035.61%, maxae 0.524
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.870
+Iter 0000640: train nll 0.045, valid error 035.840%, best valid error 035.600%, avg grad norm   0.149, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.13%, err@0.10 064.25%, err@0.20 035.84%, maxae 0.540
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.871 p10=0.866 p90=0.874
+Iter 0000660: train nll 0.046, valid error 035.840%, best valid error 035.600%, avg grad norm   0.168, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.13%, err@0.10 063.84%, err@0.20 035.84%, maxae 0.532
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000680: train nll 0.038, valid error 036.040%, best valid error 035.600%, avg grad norm   0.172, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.20%, err@0.10 064.21%, err@0.20 036.04%, maxae 0.539
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.873 p10=0.868 p90=0.877
+Iter 0000700: train nll 0.040, valid error 035.950%, best valid error 035.600%, avg grad norm   0.165, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.40%, err@0.10 064.23%, err@0.20 035.95%, maxae 0.543
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.876 p10=0.871 p90=0.879
+Iter 0000720: train nll 0.045, valid error 036.440%, best valid error 035.600%, avg grad norm   0.198, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.169, err@0.05 081.60%, err@0.10 064.40%, err@0.20 036.44%, maxae 0.557
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.867 p90=0.876
+Iter 0000740: train nll 0.044, valid error 035.950%, best valid error 035.600%, avg grad norm   0.180, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.32%, err@0.10 064.29%, err@0.20 035.95%, maxae 0.539
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.874
+Iter 0000760: train nll 0.043, valid error 035.850%, best valid error 035.600%, avg grad norm   0.239, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.20%, err@0.10 063.87%, err@0.20 035.85%, maxae 0.530
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.862 p90=0.870
+Iter 0000780: train nll 0.043, valid error 035.610%, best valid error 035.600%, avg grad norm   0.174, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.04%, err@0.10 063.95%, err@0.20 035.61%, maxae 0.528
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.864 p10=0.859 p90=0.867
+Iter 0000800: train nll 0.041, valid error 036.190%, best valid error 035.600%, avg grad norm   0.161, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.043, valid mae 0.169, err@0.05 081.35%, err@0.10 064.40%, err@0.20 036.19%, maxae 0.547
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.874
+Iter 0000820: train nll 0.042, valid error 035.860%, best valid error 035.600%, avg grad norm   0.176, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.23%, err@0.10 063.81%, err@0.20 035.86%, maxae 0.529
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.872
+Iter 0000840: train nll 0.044, valid error 035.690%, best valid error 035.600%, avg grad norm   0.221, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.14%, err@0.10 063.68%, err@0.20 035.69%, maxae 0.521
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.874
+Iter 0000860: train nll 0.044, valid error 035.910%, best valid error 035.600%, avg grad norm   0.211, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.12%, err@0.10 064.01%, err@0.20 035.91%, maxae 0.530
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.865 p90=0.873
+Iter 0000880: train nll 0.035, valid error 035.760%, best valid error 035.600%, avg grad norm   0.148, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.09%, err@0.10 063.80%, err@0.20 035.76%, maxae 0.526
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.864 p90=0.872
+Iter 0000900: train nll 0.042, valid error 035.700%, best valid error 035.600%, avg grad norm   0.164, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.03%, err@0.10 063.69%, err@0.20 035.70%, maxae 0.519
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.865 p90=0.873
+Iter 0000920: train nll 0.043, valid error 035.780%, best valid error 035.600%, avg grad norm   0.125, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.10%, err@0.10 063.72%, err@0.20 035.78%, maxae 0.524
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.863 p90=0.871
+Iter 0000940: train nll 0.038, valid error 035.700%, best valid error 035.600%, avg grad norm   0.160, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.85%, err@0.10 063.65%, err@0.20 035.70%, maxae 0.518
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.869
+Iter 0000960: train nll 0.041, valid error 035.690%, best valid error 035.600%, avg grad norm   0.204, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.16%, err@0.10 064.07%, err@0.20 035.69%, maxae 0.527
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.863 p90=0.871
+Iter 0000980: train nll 0.048, valid error 035.710%, best valid error 035.600%, avg grad norm   0.195, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.91%, err@0.10 063.66%, err@0.20 035.71%, maxae 0.516
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.864 p90=0.872
+Iter 0001000: train nll 0.039, valid error 035.680%, best valid error 035.600%, avg grad norm   0.180, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.14%, err@0.10 063.74%, err@0.20 035.68%, maxae 0.518
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.863 p90=0.871
+Iter 0001020: train nll 0.045, valid error 035.760%, best valid error 035.600%, avg grad norm   0.153, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.88%, err@0.10 063.67%, err@0.20 035.76%, maxae 0.514
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.865 p10=0.860 p90=0.868
+Iter 0001040: train nll 0.042, valid error 035.740%, best valid error 035.600%, avg grad norm   0.168, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.22%, err@0.10 064.08%, err@0.20 035.74%, maxae 0.526
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.865 p10=0.860 p90=0.868
+Iter 0001060: train nll 0.043, valid error 035.740%, best valid error 035.600%, avg grad norm   0.178, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.10%, err@0.10 063.96%, err@0.20 035.74%, maxae 0.525
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.863 p90=0.871
+Iter 0001080: train nll 0.042, valid error 035.780%, best valid error 035.600%, avg grad norm   0.219, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.06%, err@0.10 063.61%, err@0.20 035.78%, maxae 0.518
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.869
+Iter 0001100: train nll 0.045, valid error 035.750%, best valid error 035.600%, avg grad norm   0.175, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.91%, err@0.10 063.95%, err@0.20 035.75%, maxae 0.517
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.862 p90=0.870
+Iter 0001120: train nll 0.046, valid error 035.740%, best valid error 035.600%, avg grad norm   0.183, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.81%, err@0.10 063.69%, err@0.20 035.74%, maxae 0.514
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.865 p10=0.861 p90=0.868
+Iter 0001140: train nll 0.041, valid error 035.730%, best valid error 035.600%, avg grad norm   0.203, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.91%, err@0.10 063.99%, err@0.20 035.73%, maxae 0.519
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.872 p10=0.868 p90=0.875
+Iter 0001160: train nll 0.045, valid error 035.990%, best valid error 035.600%, avg grad norm   0.205, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.168, err@0.05 081.37%, err@0.10 064.42%, err@0.20 035.99%, maxae 0.539
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.863 p90=0.871
+Iter 0001180: train nll 0.040, valid error 035.770%, best valid error 035.600%, avg grad norm   0.167, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.07%, err@0.10 063.57%, err@0.20 035.77%, maxae 0.517
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.864 p10=0.859 p90=0.867
+Iter 0001200: train nll 0.046, valid error 035.890%, best valid error 035.600%, avg grad norm   0.206, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.09%, err@0.10 064.20%, err@0.20 035.89%, maxae 0.527
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.863 p90=0.871
+Iter 0001220: train nll 0.043, valid error 035.790%, best valid error 035.600%, avg grad norm   0.259, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.10%, err@0.10 063.55%, err@0.20 035.79%, maxae 0.515
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.864 p10=0.859 p90=0.867
+Iter 0001240: train nll 0.043, valid error 035.790%, best valid error 035.600%, avg grad norm   0.202, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.06%, err@0.10 063.95%, err@0.20 035.79%, maxae 0.524
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.872
+Iter 0001260: train nll 0.041, valid error 035.970%, best valid error 035.600%, avg grad norm   0.186, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.07%, err@0.10 063.85%, err@0.20 035.97%, maxae 0.520
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.874
+Iter 0001280: train nll 0.046, valid error 036.020%, best valid error 035.600%, avg grad norm   0.186, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.21%, err@0.10 064.08%, err@0.20 036.02%, maxae 0.529
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.865 p10=0.861 p90=0.868
+Iter 0001300: train nll 0.041, valid error 035.740%, best valid error 035.600%, avg grad norm   0.184, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.82%, err@0.10 063.91%, err@0.20 035.74%, maxae 0.515
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.865 p10=0.861 p90=0.869
+Iter 0001320: train nll 0.041, valid error 035.730%, best valid error 035.600%, avg grad norm   0.196, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.83%, err@0.10 063.97%, err@0.20 035.73%, maxae 0.513
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.862 p90=0.870
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/aswini/Fifth_project_on_dialogue/trainingRNNs_torch/train.py", line 657, in <module>
+    main()
+  File "/home/aswini/Fifth_project_on_dialogue/trainingRNNs_torch/train.py", line 472, in main
+    valid_err_010 += float((abs_err > 0.10).float().mean().detach().cpu())
+KeyboardInterrupt
+Iter 0001340: train nll 0.044, valid error 035.780%, best valid error 035.600%, avg grad norm   0.193, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.92%, err@0.10 063.70%, err@0.20 035.78%, maxae 0.510
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.870 p10=0.866 p90=0.873
+Iter 0001360: train nll 0.046, valid error 035.920%, best valid error 035.600%, avg grad norm   0.198, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.12%, err@0.10 064.10%, err@0.20 035.92%, maxae 0.528
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.864 p90=0.872
+Iter 0001380: train nll 0.043, valid error 035.990%, best valid error 035.600%, avg grad norm   0.179, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.10%, err@0.10 063.89%, err@0.20 035.99%, maxae 0.520
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.864 p90=0.871
+Iter 0001400: train nll 0.043, valid error 035.920%, best valid error 035.600%, avg grad norm   0.158, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.98%, err@0.10 063.66%, err@0.20 035.92%, maxae 0.516
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.862 p90=0.870
+Iter 0001420: train nll 0.045, valid error 035.770%, best valid error 035.600%, avg grad norm   0.189, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.91%, err@0.10 063.67%, err@0.20 035.77%, maxae 0.510
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.862 p90=0.870
+Iter 0001440: train nll 0.040, valid error 035.720%, best valid error 035.600%, avg grad norm   0.166, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.84%, err@0.10 063.73%, err@0.20 035.72%, maxae 0.509
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.862 p90=0.870
+Iter 0001460: train nll 0.041, valid error 035.730%, best valid error 035.600%, avg grad norm   0.201, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.87%, err@0.10 063.74%, err@0.20 035.73%, maxae 0.508
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.869 p10=0.865 p90=0.873
+Iter 0001480: train nll 0.043, valid error 035.940%, best valid error 035.600%, avg grad norm   0.244, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.11%, err@0.10 064.08%, err@0.20 035.94%, maxae 0.524
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.868 p10=0.864 p90=0.871
+Iter 0001500: train nll 0.043, valid error 036.000%, best valid error 035.600%, avg grad norm   0.194, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 081.06%, err@0.10 063.83%, err@0.20 036.00%, maxae 0.517
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.869
+Iter 0001520: train nll 0.036, valid error 035.750%, best valid error 035.600%, avg grad norm   0.167, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.86%, err@0.10 063.96%, err@0.20 035.75%, maxae 0.510
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.869
+Iter 0001540: train nll 0.044, valid error 035.770%, best valid error 035.600%, avg grad norm   0.213, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.90%, err@0.10 063.97%, err@0.20 035.77%, maxae 0.510
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.866 p10=0.861 p90=0.869
+Iter 0001560: train nll 0.042, valid error 035.860%, best valid error 035.600%, avg grad norm   0.155, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.83%, err@0.10 063.92%, err@0.20 035.86%, maxae 0.508
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.00,-1.97) mean=-11.95 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.867 p10=0.862 p90=0.870
+Iter 0001580: train nll 0.041, valid error 035.770%, best valid error 035.600%, avg grad norm   0.122, avg grad norm (post clip)   0.000, rho_Whh  0.73, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 0.042, valid mae 0.167, err@0.05 080.88%, err@0.10 063.64%, err@0.20 035.77%, maxae 0.509

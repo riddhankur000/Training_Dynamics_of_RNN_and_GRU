@@ -149,14 +149,14 @@ def grad_time_profile(task, model, x: torch.Tensor, y_onehot: torch.Tensor, coll
     loss, err, _, h, extras = compute_loss_and_error(task, model, x, y_onehot, return_extras=collect_extras)
 
     # Compute gradient of loss wrt h and find the norm. This is g_t.
-    g_h = torch.autograd.grad(loss, h, retain_graph=True, allow_unused=True)[0]
-    if g_h is None:
-        # Handle the case where gradients didn't flow
-        g_h = torch.zeros_like(h)
+    g_h = torch.autograd.grad(loss, h, retain_graph=True)[0]
     g_t = torch.norm(g_h, p=2, dim=2).mean(dim=1)
 
     # Then compute a_t as the mean activation derivative and saturation distances.
-    deriv = model.act_deriv_from_h(h)
+    if hasattr(model, "act_deriv_from_h"):
+        deriv = model.act_deriv_from_h(h)
+    else:
+        deriv = 1.0 - h * h  # Default tanh derivative for GRU candidate
     a_t = deriv.mean(dim=(1, 2))
 
     # Then sat_t using _hidden_sat_time.
@@ -251,7 +251,7 @@ def parse_args():
     p.add_argument("--mempos", type=int, default=10)
     p.add_argument("--memall", action="store_true")
 
-    p.add_argument("--device", type=str, default="cpu", choices=["cpu","cuda"])
+    p.add_argument("--device", type=str, default="cuda", choices=["cpu","cuda"])
     return p.parse_args()
 
 
